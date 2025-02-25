@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 column layout</title>
+    <style>
+        header {
+            outline: 1px dotted black;
+            height: 100px;
+        }
+
+        header ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            height: 90px;
+            justify-content: space-evenly;
+        }
+
+        header ul li {
+            outline: 1px solid red;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+
+        }
+
+        main {
+            outline: 1px solid red;
+            background-color: beige;
+            height: 500px;
+            display: flex;
+
+        }
+
+        aside {
+            outline: 1px dashed blue;
+            flex: 1;
+
+        }
+
+        section {
+            outline: 1px solid purple;
+            flex: 5;
+
+
+        }
+
+        footer {
+            outline: 1px dotted pink;
+            height: 100px;
+
+        }
+
+        /* break point for 1200px */
+        /* stack both cols */
+        @media only screen and (max-width: 1200px) {
+
+            main {
+
+                flex-direction: column;
+            }
+
+        }
+
+        /* break point for 800px */
+        /* hide aside */
+        @media only screen and (max-width: 600px) {
+
+            aside {
+                display: none;
+            }
+
+            header {
+            }
+            header ul {
+
+                    flex-direction: column-reverse;
+                                
+            }
+            header ul li {
+                justify-content: flex-start;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+       <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Buy</li>
+        <li>Go Away</li>
+        <li>Log in</li>
+       </ul>
+
+    </header>
+
+    <main>
+        <aside>here will be some nav</aside>
+        <section>this will be the main content sd kfjlsd flkjs dflkj sdlkfj slkdjf lksjd flkjs dlfk lksjd fljs dlfj
+            slkdjf lksj dflkj sldkfj lskdj flk </section>
+
+    </main>
+
+    <footer>this is the footer</footer>
+
+</body>
+
+</html>
