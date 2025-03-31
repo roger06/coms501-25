@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            function showName() {
+
+                var thename = document.getElementById("yourname").value; 
+
+                console.log(thename);
+
+                document.getElementById("showname").innerText = thename;
+                // alert("your name is "  + thename  );
+
+            }
+
+    </script>
+</head>
+<body>
+    <h1>Please enter your name:</h1>
+
+    <input type="text" name="yourname" id="yourname">
+
+    <button onclick="showName()">Show name</button>
+    
+    <div id="showname"></div>
+
+
+</body>
+</html>
